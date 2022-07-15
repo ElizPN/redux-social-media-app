@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 export const PostsList = () => {
   const posts = useSelector((state) => state.posts)
-  console.log(posts)
+  console.log(posts) // when we add post
 
   const renderedPost = posts.map((post) => (
     <article className='"post-excerpt' key={post.id}>
