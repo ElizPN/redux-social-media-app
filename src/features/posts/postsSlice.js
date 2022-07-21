@@ -4,14 +4,13 @@ const initialState = [
   { id: '1', title: 'First Post!', content: 'Hello!' },
   { id: '2', title: 'Second Post', content: 'More text' },
 ]
-// createSlice genarate reduser function that will handle our post data
+// createSlice genarate reducer function that will handle our post data
 const postsSlice = createSlice({
   name: 'posts',
   initialState,
   reducers: {
     postAdded(state, action) {
       state.push(action.payload) // new field
-      console.log(action.payload)
     },
   },
 })

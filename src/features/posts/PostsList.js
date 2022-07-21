@@ -2,8 +2,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export const PostsList = () => {
+  // using useSelector we can read data from our store
+  // state - is our object that we passed to store
+  // state.posts - is what will return postsReducer that we passed as property of posts { posts: postsReducer }
+  // postsReducer will return array with all posts
   const posts = useSelector((state) => state.posts)
-  console.log(posts) // when we add post
+  console.log(posts)
 
   const renderedPost = posts.map((post) => (
     <article className='"post-excerpt' key={post.id}>
